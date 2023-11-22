@@ -1,0 +1,64 @@
+{
+  "supermarket": [
+    {
+      "name": "Soto Betawi",
+      "price": 20000,
+      "stok": 1000,
+      "id": 1
+    },
+    {
+      "name": "Chicken Express",
+      "price": 15000,
+      "stok": 1000,
+      "id": 2
+    },
+    {
+      "name": "Siomay Batagor",
+      "price": 15000,
+      "stok": 1000,
+      "id": 3
+    },
+    {
+      "name": "Chinese Food",
+      "price": 20000,
+      "stok": 1000,
+      "id": 4
+    },
+    {
+      "name": "Smoothie bowl",
+      "price": 17000,
+      "stok": 1000,
+      "id": 5
+    },
+    {
+      "name": "Telur Gulung",
+      "price": 7000,
+      "stok": 1000,
+      "id": 6
+    },
+    {
+      "name": "Seblak",
+      "price": 12000,
+      "stok": 1000,
+      "id": 7
+    },
+    {
+      "name": "Bola Ubi",
+      "price": 15000,
+      "stok": 1000,
+      "id": 8
+    }
+  ],
+  "cafe": [
+    {
+      "name": "Mango Drinks",
+      "price": "40000",
+      "id": 1
+    },
+    {
+      "name": "Es Teh",
+      "price": "5000",
+      "id": 2
+    }
+  ]
+}
