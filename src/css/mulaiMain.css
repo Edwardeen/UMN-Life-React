@@ -1,0 +1,84 @@
+.gameCondition {
+  background-color: "grey";
+  height: "100vh";
+  width: "100%";
+  display: "flex";
+  flex-direction: "column";
+  justify-content: "center";
+  align-items: "center";
+}
+
+.customStyleBox {
+  border-radius: 8px;
+}
+
+#pilih-gender-frame {
+  width: 200px;
+  height: 500px;
+  margin-top: 10px;
+}
+
+#pg-title {
+}
+
+#pg-visual {
+}
+
+.gambar-karakter {
+  width: 200px;
+  height: 300px;
+}
+
+.switchLeft {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid gray;
+  border-bottom: 25px solid transparent;
+}
+
+.switchRight {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid gray;
+  border-bottom: 25px solid transparent;
+}
+
+#login-frame {
+}
+
+/* #choose-character {
+  background-color: blue;
+  width: 50%;
+} */
+
+#login-form {
+}
+
+#login-form form {
+}
+
+#login-form form img {
+}
+
+#login-form form input[type="text"] {
+}
+
+/* #login-form form button[type="submit"] {
+  background-color: red;
+  height: 3rem;
+  width: 12rem;
+} */
+
+#login-form form select {
+}
+
+#login-form form select option {
+}
+
+.btnHover {
+}
+
+.btnHover:hover {
+}

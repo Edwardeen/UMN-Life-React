@@ -1,0 +1,339 @@
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#HeaderTexts {
+  color: rgb(228, 227, 227);
+  background-color: rgb(27, 27, 27);
+  opacity: 100%;
+  text-align: center;
+  border-radius: 20px;
+  width: 410px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 0 auto;
+}
+
+.WeatherPix {
+  width: 102%;
+}
+
+#DayNTime {
+  color: white;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.small-text {
+  font-size: 10px !important;
+  margin-top: 8px;
+  opacity: 0%;
+}
+
+#phone-top-screen {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tampilan-search-bar {
+  height: 20px;
+  width: 100%;
+  background-color: #292929;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#search-bar {
+  width: 80%;
+  height: 70%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#phone-top-screen img {
+  height: 15px;
+  width: 15px;
+  aspect-ratio: 1;
+}
+
+#phone-edge {
+  background-color: black;
+  height: 40vh;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#phone-edge-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: black;
+  height: 80%;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+#phone-screen {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 10px;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+#phone-screen h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#phone-screen p {
+  font-size: 15px;
+}
+
+/* inventory */
+#inventory-div {
+  background-color: wheat;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  height: 80%;
+  z-index: 5;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+#inventory-header button {
+  background-color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  color: white;
+}
+
+.inventory-card-div {
+  background-color: rgb(199, 199, 199);
+  height: 30vh;
+  width: 100%;
+}
+
+#inventory-content {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+}
+
+.gambar-supermarket {
+  border-bottom: 1px solid black;
+}
+
+/* profile */
+#profile-div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: aqua;*/
+  height: 650px;
+  width: 370px;
+  font-family: "Josefin Sans", sans-serif;
+  /* width: 25.5%; */
+  /* height: 69%; */
+}
+
+#profile-foto {
+  margin-left: 9vh;
+  margin-top: 14vh;
+  width: 150px;
+}
+
+#profile-nim {
+  font-size: 2.5vh;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+
+#profile-nama {
+  margin-bottom: 1vh;
+  margin-left: 2vh;
+}
+
+#profile-jurusan,
+#profile-tanggal {
+  margin-left: 2vh;
+  font-size: 2.5vh;
+  margin-bottom: 1vh;
+}
+
+.bgTest {
+  position: relative;
+}
+
+#background-latar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+#HUD {
+  background-color: #dd99bb;
+  opacity: 90%;
+  margin-top: 20px;
+  border-radius: 20px;
+  height: 40%;
+  width: 99%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#moneyBar {
+  width: 100px;
+  height: 50px;
+}
+
+#open-inventory-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: blueviolet;
+  opacity: 60%;
+}
+
+.moneyIcon {
+  width: 50px;
+}
+
+#centerGreetings {
+  background-color: #7b506f;
+  color: #ead7d1;
+  border-radius: 15px;
+}
+
+#GoToPlaceCard {
+  background-color: #1f1a38;
+  color: #ead7d1;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+.progress-text {
+  margin: 0;
+  font-size: 2.5vh;
+  font-family: Bebas Neue;
+}
+
+.progress-div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vh;
+}
+
+.progress-bar {
+  height: 50px;
+  /* height: 8vh;
+  width: 30vh; */
+  background-color: #b9bcc9;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: red;
+}
+
+.progress-div button {
+  width: 30%;
+}
+
+#phone-edge {
+  background-color: black;
+  height: 40vh;
+  width: 90%;
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#phone-edge-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: black;
+  height: 80%;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+#phone-screen {
+  background-color: white;
+
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#phone-screen h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#phone-screen p {
+  font-size: 15px;
+}
+
+#supermarketmenu {
+}
