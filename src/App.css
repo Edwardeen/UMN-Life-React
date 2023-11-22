@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: black;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #2f8f9d;
+}
+
+.containerBox {
+  border-radius: 10px;
+}
+
+#overlay {
+  position: absolute;
+
+  z-index: 9;
+  background-color: #383838;
+  /* filter: blur(4px);
+  -webkit-filter: blur(8px); */
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1080px) {
+  #pg-title {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .containerBox {
+    min-width: 80%;
+  }
+
+  #login-frame {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #login-form form input[type="text"] {
+    width: 90%;
+  }
+}
+
+/* The device with borders */
+.tablet {
+  position: relative;
+  width: 768px;
+  height: 1024px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.tablet:after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: rgb(153, 24, 24);
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.tablet .content {
+  width: 768px;
+  height: 1024px;
+  background: white;
+  margin: -1px;
+}
+
+#ButtonStatus {
+  background-color: rgb(236, 236, 236);
+  border: 0;
+  padding: 10px;
+  border-radius: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+#logoStatus {
+  margin-left: 0px auto;
+}
+
+#right-status-frame {
+  width: 300px;
+  margin-top: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 95%;
+}
+
+#TextNamaStatus {
+  color: #7c6354;
+  font-size: 15px;
+  background-color: rgb(236, 238, 171);
+  text-align: center;
+}
+
+#buttonGoTo {
+  background-color: #dd99bb;
+  box-shadow: #dd99bb;
+  margin: auto;
+}
+
+#center-gambar-pemain {
+  height: 400px;
+}
+
+#supermarket-div {
+  background-color: #dbcdc6;
+  margin-top: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#supermarket-header {
+  background-color: rgb(170, 160, 155);
+  text-align: center;
+  padding-top: 20px;
+}
+
+#frame-barang {
+  background-color: #a37365;
+  text-align: center;
+  border-top: 100px black;
+}
+
+#frame-barang img {
+  width: 90px;
+  height: 90px;
+  background-color: #c9a69b;
+  border-top: 10px black;
+}
+
+#cafe-div {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ef476f;
+}
+
+#cafe-div img {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(236, 155, 174);
+}
+
+#progressbar {
+  height: 20px;
+  background-color: rgb(236, 155, 174);
+}

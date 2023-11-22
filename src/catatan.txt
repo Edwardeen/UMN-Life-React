@@ -1,0 +1,269 @@
+.logoStatus {
+  margin: 0;
+  padding: 0;
+  width: 6vh;
+  height: auto;
+  /* justify-self: center;
+  align-self: center; */
+}
+
+.player-action-button {
+  /* overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: lightblue;
+  border-radius: 10px;
+  margin-right: 5px;
+  width: 30%;
+  height: auto;
+}
+
+.player-action-button:disabled {
+  opacity: 0.9;
+  background-color: white;
+}
+
+
+.progress-text {
+  margin: 0;
+  font-size: 2.5vh;
+  font-family: Bebas Neue;
+}
+
+.progress-div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vh;
+}
+
+.progress-bar {
+  height: 50px;
+  /* height: 8vh;
+  width: 30vh; */
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: orange;
+}
+
+.progress-div button {
+  width: 30%;
+}
+
+//StatusBar.jsx
+ <div
+      id="right-status-frame"
+      style={{
+        backgroundColor: "#2e6566",
+        borderRadius: "8px",
+        boxShadow: "0px 0px 5px 2px black"
+      }}
+    >
+      {props.progress.map((status) => (
+        <div>
+          <p className="progress-text">{status[0]}</p>
+          <div className="progress-div">
+            <button
+              onClick={() => props.doAction(status[0])}
+              disabled={status[status.length - 1]}
+              className="player-action-button"
+              style={{ marginLeft: window.innerWidth > 700 ? "20px" : "8px" }}
+            >
+              <img
+                className="logoStatus"
+                src={
+                  status[0] === "Makan"
+                    ? Makan
+                    : status[0] === "Main"
+                    ? Main
+                    : status[0] === "Tidur"
+                    ? Tidur
+                    : status[0] === "Belajar"
+                    ? Belajar
+                    : null
+                }
+                alt=""
+              />
+            </button>
+            <progress
+              className="progress-bar"
+              value={status[1]}
+              max="100"
+              min="0"
+              style={{ marginRight: "20px" }}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+
+
+    function mulaiMainStyle() {
+    if (isDead === true || isFailed === true) {
+      changeGameMenu(false);
+    }
+    return classNames("MulaiMain", {
+      "w-75 border border-2 py-3 containerBox": gameMenu,
+      "w-50 border border-2 py-3 containerBox": !gameMenu
+    })
+  };
+
+  //StatusBar.jsximport React, { useState, useEffect } from "react";
+import Belajar from "../assets/assetsIcon/study.png";
+import Main from "../assets/assetsIcon/play.png";
+import Makan from "../assets/assetsIcon/eating.png";
+import Tidur from "../assets/assetsIcon/sleep.png";
+import "../App.css";
+
+export default function Status(props) {
+  // const [progress, setProgress] = useState([
+  //   ["Makan", 50],
+  //   ["Main", 50],
+  //   ["Tidur", 50],
+  //   ["Belajar", 0]
+  // ]);
+  // useEffect(function appRunTimer() {
+  //   const interval = setInterval(() => {
+  //     var tempActions = [...progress];
+
+  //     if (tempActions[0][1] >= 100) {
+  //       tempActions[0][1] = 100;
+  //     }
+  //     if (tempActions[1][1] >= 100) {
+  //       tempActions[1][1] = 100;
+  //     }
+  //     if (tempActions[2][1] >= 100) {
+  //       tempActions[2][1] = 100;
+  //     }
+
+  //     if (tempActions[0][1] >= 2) tempActions[0][1] -= 2;
+  //     if (tempActions[1][1] >= 2) tempActions[1][1] -= 2;
+  //     if (tempActions[2][1] >= 2) tempActions[2][1] -= 2;
+
+  //     // console.log(tempActions[0][1]);
+  //     // console.log(tempActions[1][1]);
+  //     // console.log(tempActions[2][1]);
+
+  //     if (tempActions[0][1] <= 15) {
+  //       props.updateNotif("Makan dl");
+  //     }
+  //     if (tempActions[1][1] <= 15) {
+  //       props.updateNotif("Main");
+  //     }
+  //     if (tempActions[2][1] <= 15) {
+  //       props.updateNotif("Tidur dl");
+  //     }
+
+  //     if (tempActions[3][1] <= 15) {
+  //       props.updateNotif("Belajar dl");
+  //     }
+
+  //     if (tempActions[3][1] >= 100) {
+  //       props.getBelajarValue(tempActions[3][1]);
+  //       tempActions[3][1] = 0;
+  //     }
+  //     props.getBelajarValue(tempActions[3][1]);
+  //     setProgress(tempActions);
+  //   }, 1000);
+
+  //   return function stopTimer() {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
+
+  // // const interval = setInterval(function () {
+  // //   var tempActions = [...progress];
+  // //   if (tempActions[0][1] >= 2) tempActions[0][1] -= 2;
+  // //   if (tempActions[1][1] >= 2) tempActions[1][1] -= 2;
+  // //   if (tempActions[2][1] >= 2) tempActions[2][1] -= 2;
+
+  // //   console.log(tempActions[0][1]);
+  // //   // console.log(tempActions[1][1]);
+  // //   // console.log(tempActions[2][1]);
+
+  // //   if (tempActions[0][1] <= 15) {
+  // //     props.updateNotif("Makan dl");
+  // //   }
+  // //   if (tempActions[1][1] <= 15) {
+  // //     props.updateNotif("Main");
+  // //   }
+  // //   if (tempActions[2][1] <= 15) {
+  // //     props.updateNotif("Tidur dl");
+  // //   }
+
+  // //   if (tempActions[3][1] <= 15) {
+  // //     props.updateNotif("Belajar dl");
+  // //   }
+
+  // //   if (tempActions[3][1] >= 100) {
+  // //     props.getBelajarValue(tempActions[3][1]);
+  // //     tempActions[3][1] = 0;
+  // //   }
+  // //   props.getBelajarValue(tempActions[3][1]);
+
+  // //   setProgress(tempActions);
+  // //   clearInterval(interval);
+  // // }, 1000);
+
+  // function doAction(action) {
+  //   var incrementVal = 10;
+  //   if (action === "Belajar") incrementVal = 1;
+  //   var tempActions = [...progress];
+  //   for (let i of tempActions) {
+  //     if (i[0] === action) i[1] += incrementVal;
+  //   }
+  //   setProgress(tempActions);
+  //   // clearInterval(interval);
+  // }
+
+  return (
+    <div
+      className="w-50 p-3"
+      id="right-status-frame"
+      style={{
+        backgroundColor: "#2e6566",
+        borderRadius: "8px",
+        boxShadow: "0px 0px 5px 2px black"
+      }}
+    >
+      {props.progress.map((status) => (
+        <div>
+          <p className="progress-text">{status[0]}</p>
+          <div className="progress-div d-inline-flex flex-row m-0">
+            <button
+              onClick={() => props.doAction(status[0])}
+              disabled={status[status.length - 1]}
+              className="player-action-button mx-1 w-25"
+            >
+              <img
+                className="logoStatus w-25"
+                src={
+                  status[0] === "Makan"
+                    ? Makan
+                    : status[0] === "Main"
+                    ? Main
+                    : status[0] === "Tidur"
+                    ? Tidur
+                    : status[0] === "Belajar"
+                    ? Belajar
+                    : null
+                }
+                alt=""
+              />
+            </button>
+            <progress
+              className="progress-bar mx-1"
+              value={status[1]}
+              max="100"
+              min="0"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
